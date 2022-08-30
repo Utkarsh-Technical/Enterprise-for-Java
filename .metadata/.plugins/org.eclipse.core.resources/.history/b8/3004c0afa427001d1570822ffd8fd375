@@ -1,0 +1,55 @@
+package Gussing_game;
+import java.util.*;
+
+class Guesser{
+	int guserNum;
+	
+	public int gusserNumber() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Guesser Plz enter your name");
+		String gussName = scan.nextLine();
+		System.out.println(gussName + " Plz enter the number");
+		guserNum = scan.nextInt();
+		return guserNum;
+	}
+}
+
+class Player{
+	int guserNum;
+	
+	public int gusserNumber() {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Player Plz enter your name");
+	String gussName = sc.nextLine();
+	System.out.println(gussName + " Plz enter the number");
+	guserNum = sc.nextInt();
+	return guserNum;
+	}
+}
+
+public class mini_project {
+	
+	public static void main(String[] args) {
+		System.out.println("Get Ready to Play !!\n");
+		System.out.println("====================================================");
+		
+		Guesser g = new Guesser();  
+		Player p1 = new Player();
+		Player p2 = new Player();
+		Player p3 = new Player();
+		
+		int gusNum = g.gusserNumber();
+		int player1 = p1.gusserNumber();
+		int player2 = p1.gusserNumber();
+		int player3 = p1.gusserNumber();
+		System.out.println("====================================================");
+		System.out.println("Gusser:" + gusNum +"\n");
+		
+		if(gusNum == player1 && gusNum != player2 && gusNum != player3)
+			System.out.print("Player 1 won the match");
+		else if(gusNum != player1 && gusNum == player2 && gusNum != player3)
+			System.out.print("Player 2 won the match");
+		else
+			System.out.print("Player 3 won the match");
+	}
+}

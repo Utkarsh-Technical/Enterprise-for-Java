@@ -1,0 +1,76 @@
+package Gussing_game;
+import java.util.*;
+
+class Guesser{
+	int guserNum;
+	public int gusserNumber() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Guesser Plz enter the number");
+		guserNum = scan.nextInt();
+		return guserNum;
+	}
+}
+
+class Player{
+	int guserNum;
+	String gussName;
+	public String gusserName() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Player Plz enter your name");
+		gussName = sc.nextLine();
+		return gussName;
+	}
+	public int gusserNumber() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Plz enter the number");
+		guserNum = sc.nextInt();
+		return guserNum;
+	}
+}
+
+public class mini_project {
+	
+	public static void main(String[] args) {
+		System.out.println("Get Ready to Play !!");
+		System.out.println("====================================================");
+		
+		Guesser g = new Guesser();  
+		Player p1 = new Player();
+		Player p2 = new Player();
+		Player p3 = new Player();
+		
+		int gusNum = g.gusserNumber();
+		int player1 = p1.gusserNumber();
+		int player2 = p1.gusserNumber();
+		int player3 = p1.gusserNumber();
+		System.out.println("====================================================");
+		System.out.println("Gusser:" + gusNum +"\t"+ p1.gusserName()+":"+ player1 +"\t" + p2.gusserName()+":"+ player2 +"\t" + p3.gusserName()+":"+ player3 +"\t");
+		
+		if(gusNum != player1) 
+		{
+			if (gusNum != player2) 
+			{
+				if (gusNum != player3)
+						System.out.println("Lost the Match");
+				else
+					System.out.println("Player 3 won the match");
+			}
+			else{
+				if (gusNum != player3)
+					System.out.println("Player 2 won the match");
+				else
+					System.out.println("Player 2 & Player 3 won the match");
+			}
+		}
+		else {
+			if(gusNum == player2) {
+				if(gusNum == player3)
+					System.out.println("Hurray! All guessed it right.");
+				else
+					System.out.println("Player 1 & Player 2 won the match");
+			}
+			else
+				System.out.println("Player 1 won the match");
+		}	
+	}
+}

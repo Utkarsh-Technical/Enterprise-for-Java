@@ -1,0 +1,17 @@
+package Gussing_game;
+
+class guesser{
+	int guserNum;
+	System.out.println("Gusser the number");
+	
+}
+
+
+public class mini_project {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
